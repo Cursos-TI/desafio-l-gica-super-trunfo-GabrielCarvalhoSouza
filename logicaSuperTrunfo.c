@@ -46,6 +46,7 @@ int main() {
     printf("Pontos turísticos: %d\n", city01_tourism);
     printf("Densidade: %.2f\n", city01_density);
     printf("PIB per capita: %.2f\n", city01_pib_per_capita);
+    printf("Superpoder: %.2f\n", city01_superpower);
 
     // Variáveis da cidade 02
     char city02_code[4];
@@ -91,6 +92,7 @@ int main() {
     printf("Pontos turísticos: %d\n", city02_tourism);
     printf("Densidade: %.2f\n", city02_density);
     printf("PIB per capita: %.2f\n", city02_pib_per_capita);
+    printf("Superpoder: %.2f\n", city02_superpower);
 
     // Comparando todos os atributos das cidades
     if (city01_population > city02_population) {
