@@ -94,62 +94,104 @@ int main() {
     printf("PIB per capita: %.2f\n", city02_pib_per_capita);
     printf("Superpoder: %.2f\n", city02_superpower);
 
-    // Comparando todos os atributos das cidades
-    if (city01_population > city02_population) {
-        printf("\nA cidade 01 tem mais população do que a cidade 02\n");
-    } else if (city01_population == city02_population) {
-        printf("\nA cidade 01 e a cidade 02 tem a mesma população\n");
-    } else {
-        printf("\nA cidade 02 tem mais população do que a cidade 01\n");
+    // Menu de opções
+    printf("\nEscolha uma opção:\n");
+    printf("1 - Comparar população\n");
+    printf("2 - Comparar área\n");
+    printf("3 - Comparar PIB\n");
+    printf("4 - Comparar pontos turísticos\n");
+    printf("5 - Comparar densidade\n");
+    printf("6 - Comparar PIB per capita\n");
+    printf("7 - Comparar superpoder\n");
+    printf("8 - Sair\n");
+
+    int option;
+    printf("\nOpção: ");
+    scanf("%d", &option);
+    
+    switch (option) {
+        case 1:
+            if (city01_population > city02_population) {
+                printf("\nA cidade 01 tem mais população do que a cidade 02\n");
+            } else {
+                if (city01_population == city02_population) {
+                    printf("\nA cidade 01 e a cidade 02 tem a mesma população\n");
+                } else {
+                    printf("\nA cidade 02 tem mais população do que a cidade 01\n");
+                }
+            }
+            break;
+        case 2:
+            if (city01_area > city02_area) {
+                printf("A cidade 01 tem mais área do que a cidade 02\n");
+            } else {
+                if (city01_area == city02_area) {
+                    printf("A cidade 01 e a cidade 02 tem a mesma área\n");
+                } else {
+                    printf("A cidade 02 tem mais área do que a cidade 01\n");
+                }
+            }
+            break;
+        case 3:
+            if (city01_pib > city02_pib) {
+                printf("A cidade 01 tem mais PIB do que a cidade 02\n");
+            } else {
+                if (city01_pib == city02_pib) {
+                    printf("A cidade 01 e a cidade 02 tem o mesmo PIB\n");
+                } else {
+                    printf("A cidade 02 tem mais PIB do que a cidade 01\n");
+                }
+            }
+            break;
+        case 4:
+            if (city01_tourism > city02_tourism) {
+                printf("A cidade 01 tem mais pontos turísticos do que a cidade 02\n");
+            } else {
+                if (city01_tourism == city02_tourism) {
+                    printf("A cidade 01 e a cidade 02 tem o mesmo número de pontos turísticos\n");
+                } else {
+                    printf("A cidade 02 tem mais pontos turísticos do que a cidade 01\n");
+                }
+            }
+            break;
+        case 5:
+            if (city01_density < city02_density) {
+                printf("A cidade 01 tem menos densidade do que a cidade 02\n");
+            } else {
+                if (city01_density == city02_density) {
+                    printf("A cidade 01 e a cidade 02 tem a mesma densidade\n");
+                } else {
+                    printf("A cidade 02 tem menos densidade do que a cidade 01\n");
+                }
+            }
+            break;
+        case 6:
+            if (city01_pib_per_capita > city02_pib_per_capita) {
+                printf("A cidade 01 tem mais PIB per capita do que a cidade 02\n");
+            } else {
+                if (city01_pib_per_capita == city02_pib_per_capita) {
+                    printf("A cidade 01 e a cidade 02 tem o mesmo PIB per capita\n");
+                } else {
+                    printf("A cidade 02 tem mais PIB per capita do que a cidade 01\n");
+                }
+            }
+            break;
+        case 7:
+            if (city01_superpower > city02_superpower) {
+                printf("A cidade 01 tem mais superpoder do que a cidade 02\n");
+            } else {
+                if (city01_superpower == city02_superpower) {
+                    printf("A cidade 01 e a cidade 02 tem o mesmo superpoder\n");
+                } else {
+                    printf("A cidade 02 tem mais superpoder do que a cidade 01\n");
+                }
+            }
+            break;
+        default:
+            printf("Opção inválida.\n");
+            break;
     }
 
-    if (city01_area > city02_area) {
-        printf("A cidade 01 tem mais área do que a cidade 02\n");
-    } else if (city01_area == city02_area) {
-        printf("A cidade 01 e a cidade 02 tem a mesma área\n");
-    } else {
-        printf("A cidade 02 tem mais área do que a cidade 01\n");
-    }
-
-    if (city01_pib > city02_pib) {
-        printf("A cidade 01 tem mais PIB do que a cidade 02\n");
-    } else if (city01_pib == city02_pib) {
-        printf("A cidade 01 e a cidade 02 tem o mesmo PIB\n");
-    } else {
-        printf("A cidade 02 tem mais PIB do que a cidade 01\n");
-    }
-
-    if (city01_tourism > city02_tourism) {
-        printf("A cidade 01 tem mais pontos turísticos do que a cidade 02\n");
-    } else if (city01_tourism == city02_tourism) {
-        printf("A cidade 01 e a cidade 02 tem o mesmo número de pontos turísticos\n");
-    } else {
-        printf("A cidade 02 tem mais pontos turísticos do que a cidade 01\n");
-    }
-
-    if (city01_density < city02_density) {
-        printf("A cidade 01 tem menos densidade do que a cidade 02\n");
-    } else if (city01_density == city02_density) {
-        printf("A cidade 01 e a cidade 02 tem a mesma densidade\n");
-    } else {
-        printf("A cidade 02 tem menos densidade do que a cidade 01\n");
-    }
-
-    if (city01_pib_per_capita > city02_pib_per_capita) {
-        printf("A cidade 01 tem mais PIB per capita do que a cidade 02\n");
-    } else if (city01_pib_per_capita == city02_pib_per_capita) {
-        printf("A cidade 01 e a cidade 02 tem o mesmo PIB per capita\n");
-    } else {
-        printf("A cidade 02 tem mais PIB per capita do que a cidade 01\n");
-    }
-
-    if (city01_superpower > city02_superpower) {
-        printf("A cidade 01 tem mais superpoder do que a cidade 02\n");
-    } else if (city01_superpower == city02_superpower) {
-        printf("A cidade 01 e a cidade 02 tem o mesmo superpoder\n");
-    } else {
-        printf("A cidade 02 tem mais superpoder do que a cidade 01\n");
-    }
     return 0;
 }
  
