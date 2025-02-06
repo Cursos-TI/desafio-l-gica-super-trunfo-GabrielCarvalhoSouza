@@ -95,6 +95,8 @@ int main() {
     printf("Superpoder: %.2f\n", city02_superpower);
 
     // Menu de opções
+    int choice01, choice02;
+    printf("\nEscolha dois atributos para comparação:\n");
     printf("\nEscolha uma opção:\n");
     printf("1 - Comparar população\n");
     printf("2 - Comparar área\n");
@@ -102,94 +104,92 @@ int main() {
     printf("4 - Comparar pontos turísticos\n");
     printf("5 - Comparar densidade\n");
     printf("6 - Comparar PIB per capita\n");
-    printf("7 - Comparar superpoder\n");
-    printf("8 - Sair\n");
+    printf("7 - Comparar superpoder\n");    
+    printf("Digite o primeiro atributo: ");
+    scanf("%d", &choice01);
+    printf("Digite o segundo atributo: ");
+    scanf("%d", &choice02);
 
-    int option;
-    printf("\nOpção: ");
-    scanf("%d", &option);
+    float city01_value01, city02_value01, city01_value02, city02_value02;
+
+    switch (choice01)
+    {
+    case 1:
+        city01_value01 = city01_population;
+        city02_value01 = city02_population;
+        break;
+    case 2:
+        city01_value01 = city01_area;
+        city02_value01 = city02_area;
+        break;
+    case 3:
+        city01_value01 = city01_pib;
+        city02_value01 = city02_pib;
+        break;
+    case 4:
+        city01_value01 = city01_tourism;
+        city02_value01 = city02_tourism;
+        break;
+    case 5:
+        city01_value01 = city01_density;
+        city02_value01 = city02_density;
+        break;
+    case 6:
+        city01_value01 = city01_pib_per_capita;
+        city02_value01 = city02_pib_per_capita;
+        break;
+    case 7:
+        city01_value01 = city01_superpower;
+        city02_value01 = city02_superpower;
+        break;
+    }
+
+    switch (choice02)
+    {
+    case 1:
+        city01_value02 = city01_population;
+        city02_value02 = city02_population;
+        break;
+    case 2:
+        city01_value02 = city01_area;
+        city02_value02 = city02_area;
+        break;
+    case 3:
+        city01_value02 = city01_pib;
+        city02_value02 = city02_pib;
+        break;
+    case 4:
+        city01_value02 = city01_tourism;
+        city02_value02 = city02_tourism;
+        break;
+    case 5:
+        city01_value02 = city01_density;
+        city02_value02 = city02_density;
+        break;
+    case 6:
+        city01_value02 = city01_pib_per_capita;
+        city02_value02 = city02_pib_per_capita;
+        break;
+    case 7:
+        city01_value02 = city01_superpower;
+        city02_value02 = city02_superpower;
+        break;
+    }
     
-    switch (option) {
-        case 1:
-            if (city01_population > city02_population) {
-                printf("\nA cidade 01 tem mais população do que a cidade 02\n");
-            } else {
-                if (city01_population == city02_population) {
-                    printf("\nA cidade 01 e a cidade 02 tem a mesma população\n");
-                } else {
-                    printf("\nA cidade 02 tem mais população do que a cidade 01\n");
-                }
-            }
-            break;
-        case 2:
-            if (city01_area > city02_area) {
-                printf("A cidade 01 tem mais área do que a cidade 02\n");
-            } else {
-                if (city01_area == city02_area) {
-                    printf("A cidade 01 e a cidade 02 tem a mesma área\n");
-                } else {
-                    printf("A cidade 02 tem mais área do que a cidade 01\n");
-                }
-            }
-            break;
-        case 3:
-            if (city01_pib > city02_pib) {
-                printf("A cidade 01 tem mais PIB do que a cidade 02\n");
-            } else {
-                if (city01_pib == city02_pib) {
-                    printf("A cidade 01 e a cidade 02 tem o mesmo PIB\n");
-                } else {
-                    printf("A cidade 02 tem mais PIB do que a cidade 01\n");
-                }
-            }
-            break;
-        case 4:
-            if (city01_tourism > city02_tourism) {
-                printf("A cidade 01 tem mais pontos turísticos do que a cidade 02\n");
-            } else {
-                if (city01_tourism == city02_tourism) {
-                    printf("A cidade 01 e a cidade 02 tem o mesmo número de pontos turísticos\n");
-                } else {
-                    printf("A cidade 02 tem mais pontos turísticos do que a cidade 01\n");
-                }
-            }
-            break;
-        case 5:
-            if (city01_density < city02_density) {
-                printf("A cidade 01 tem menos densidade do que a cidade 02\n");
-            } else {
-                if (city01_density == city02_density) {
-                    printf("A cidade 01 e a cidade 02 tem a mesma densidade\n");
-                } else {
-                    printf("A cidade 02 tem menos densidade do que a cidade 01\n");
-                }
-            }
-            break;
-        case 6:
-            if (city01_pib_per_capita > city02_pib_per_capita) {
-                printf("A cidade 01 tem mais PIB per capita do que a cidade 02\n");
-            } else {
-                if (city01_pib_per_capita == city02_pib_per_capita) {
-                    printf("A cidade 01 e a cidade 02 tem o mesmo PIB per capita\n");
-                } else {
-                    printf("A cidade 02 tem mais PIB per capita do que a cidade 01\n");
-                }
-            }
-            break;
-        case 7:
-            if (city01_superpower > city02_superpower) {
-                printf("A cidade 01 tem mais superpoder do que a cidade 02\n");
-            } else {
-                if (city01_superpower == city02_superpower) {
-                    printf("A cidade 01 e a cidade 02 tem o mesmo superpoder\n");
-                } else {
-                    printf("A cidade 02 tem mais superpoder do que a cidade 01\n");
-                }
-            }
-            break;
-        default:
-            printf("Opção inválida.\n");
-            break;
+    //Verificando o vencedor
+    if ((city01_value01 > city02_value01 && city01_value02 > city02_value02) ||
+        (city01_value01 > city02_value01 && city01_value02 == city02_value02) ||
+        (city01_value01 == city02_value01 && city01_value02 > city02_value02))
+    {
+        printf("\n%s é a vencedora!\n", city01_name);
+    }
+    else if (city01_value01 == city02_value01 && city01_value02 == city02_value02)
+    {
+        printf("\nEmpate!\n");
+    }
+    else
+    {
+        printf("\n%s é a vencedora!\n", city02_name);
     }
 
     return 0;
